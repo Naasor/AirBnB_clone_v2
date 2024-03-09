@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ test file """
 
-
 import os.path
 import time
 from fabric.operations import run, put, sudo
@@ -10,6 +9,8 @@ env.hosts = ['100.25.188.244', '34.229.55.60']
 
 
 def do_pack():
+    ""  test ""
+
     timestr = time.strftime("%Y%m%d%H%M%S")
     try:
         local("mkdir -p versions")
@@ -21,6 +22,8 @@ def do_pack():
 
 
 def do_deploy(archive_path):
+    "" test ""
+
     if (os.path.isfile(archive_path) is False):
         return False
 
@@ -41,6 +44,7 @@ def do_deploy(archive_path):
 
 
 def deploy():
+    "" test ""
     try:
         archive_address = do_pack()
         val = do_deploy(archive_address)

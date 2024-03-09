@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ test file """
+
+
 import os.path
 import time
 from fabric.operations import run, put, sudo
 from fabric.api import *
-
-env.user = 'ubuntu'
 env.hosts = ['100.25.188.244', '34.229.55.60']
 
 

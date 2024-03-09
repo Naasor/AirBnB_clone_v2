@@ -9,7 +9,7 @@ env.hosts = ['100.25.188.244', '34.229.55.60']
 
 
 def do_pack():
-    ""  test ""
+    """  test do pack """
 
     timestr = time.strftime("%Y%m%d%H%M%S")
     try:
@@ -22,7 +22,7 @@ def do_pack():
 
 
 def do_deploy(archive_path):
-    "" test ""
+    """ test  do ploy"""
 
     if (os.path.isfile(archive_path) is False):
         return False
@@ -44,7 +44,7 @@ def do_deploy(archive_path):
 
 
 def deploy():
-    "" test ""
+    """ test deploy """
     try:
         archive_address = do_pack()
         val = do_deploy(archive_address)

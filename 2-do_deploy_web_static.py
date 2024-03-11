@@ -30,8 +30,9 @@ def do_deploy(archive_path):
         archive_path (str): The path of the archive to distribute.
     """
 
- if not os.path.exists(archive_path):
-     return False
+
+if not os.path.exists(archive_path):
+    return False
     file_name = os.path.basename(archive_path)
     folder = file_name.replace(".tgz", "")
     path = "/data/web_static/releases/{}/".format(folder)

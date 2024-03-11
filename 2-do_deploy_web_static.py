@@ -22,6 +22,7 @@ def do_pack():
     else:
         return None
 
+
 def do_deploy(archive_path):
     """Distributes an archive to a web server.
 
@@ -30,7 +31,7 @@ def do_deploy(archive_path):
     """
 
  if not os.path.exists(archive_path):
-        return False
+     return False
     file_name = os.path.basename(archive_path)
     folder = file_name.replace(".tgz", "")
     path = "/data/web_static/releases/{}/".format(folder)

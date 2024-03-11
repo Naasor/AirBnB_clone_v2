@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # Fabfile to distribute an archive to a web server.
 
-import os
+import os.path
 from fabric.api import env, put, run
 
 env.user = "ubuntu"
@@ -15,7 +15,7 @@ def do_deploy(archive_path):
         archive_path (str): The path of the archive to distribute.
     """
 
-     if os.path.isfile(archive_path) is False:
+    if os.path.isfile(archive_path) is False:
         return False
     file = archive_path.split("/")[-1]
     name = file.split(".")[0]

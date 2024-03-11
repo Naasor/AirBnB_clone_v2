@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 # Fabfile to distribute an archive to a web server.
+
 import os
-from fabric.api import local, runs_once, env, put, run
+import subprocess as sub
+from fabric.api import env, put, run
 from datetime import datetime
 
 env.user = "ubuntu"
